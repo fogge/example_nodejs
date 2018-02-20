@@ -2,40 +2,30 @@
 const express = require('express');
 
 // Require the person info
-const persons = require('./person-info.json');
+const movies = require('./movies.json');
 
 // Create express server
 const app = express();
 
 // A route using params
-app.get('/person/:firstName', (req, res) => {
-  let chosen = persons.filter((person) =>
-    person.firstName == req.params.firstName
+app.get('/films/title/:movieTitle', (req, res) => {
+  let chosenMoviesByTitle = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(req.params.movieTitle.toLowerCase())
   );
-  res.json(chosen);
-  /*if(chosen.length){
-    let toSend = '';
-    for(let person of chosen){
-      toSend += `
-        <h1>${person.firstName} ${person.lastName}</h1>
-        <p>${person.about}</p>
-      `
-    }
-    res.send(toSend);
-  }
-  else {
-    res.send('<h1>Could not find any person with that name!');
-  }*/
+  res.json(chosenMoviesByTitle);
 });
 
-// Another route using params
-app.get('/person/:firstName/:lastName', (req, res) => {
-  let chosen = persons.filter((person) =>
-    person.firstName == req.params.firstName &&
-    person.lastName == req.params.lastName
-  );
-  res.json(chosen);
-})
+app.get('/films/genre/:movieGenre', (req, res) => {
+  let chosenMoviesByGenre = movies.filter((movie) => {
+    for (let i = 0; i < movie.genres.length; i++) {
+      if (movie.genres[i].toLowerCase() == req.params.movieGenre.toLowerCase()) {
+        return true
+      }
+    }
+  });
+  res.json(chosenMoviesByGenre);
+});
+
 
 // Respond to everything else
 app.get('*', (req,res) => {
