@@ -7,6 +7,8 @@ const movies = require('./movies.json');
 // Create express server
 const app = express();
 
+app.use(express.static('www'));
+
 // A route using params
 app.get('/films/title/:movieTitle', (req, res) => {
   let chosenMoviesByTitle = movies.filter((movie) =>
