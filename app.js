@@ -20,7 +20,7 @@ app.get('/films/title/:movieTitle', (req, res) => {
 app.get('/films/genre/:movieGenre', (req, res) => {
   let chosenMoviesByGenre = movies.filter((movie) => {
     for (let i = 0; i < movie.genres.length; i++) {
-      if (movie.genres[i].toLowerCase() == req.params.movieGenre.toLowerCase()) {
+      if (movie.genres[i].toLowerCase().includes(req.params.movieGenre.toLowerCase())) {
         return true
       }
     }

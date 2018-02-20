@@ -5,7 +5,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 			<link href="https://fonts.googleapis.com/css?family=Amaranth|Roboto" rel="stylesheet">
 	    <!-- Bootstrap CSS -->
-	    <link rel="stylesheet" href="/css/libs/bootstrap-4-beta.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 			<!-- Font awesome CSS -->
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	    <!-- Application specific CSS -->
@@ -16,12 +16,22 @@
 	  </header>
 
 		<main class="container">
-      <form class="form-inline">
+      <input type="text" class="form-control mb-2 mr-sm-2 mt-3" id="search" placeholder="Search">
+      <select class="form-control" id="searchSelect">
+        <option>Titel</option>
+        <option>Genre</option>
+      </select>
+
+      <!-- <form class="form-inline mt-3">
         <label class="sr-only" for="inlineFormInputName2">Name</label>
         <input type="text" class="form-control mb-2 mr-sm-2" id="search" placeholder="Search">
 
         <button type="submit" id="searchButton" class="btn btn-primary mb-2">Search</button>
-      </form>
+      </form> -->
+
+      <div class="container movieRendering">
+
+      </div>
 		</main>
 
 
@@ -31,10 +41,9 @@
 	  </footer>
 
 				<!-- Start -->
-        <script
-          src="http://code.jquery.com/jquery-3.3.1.min.js"
-          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-          crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="/main.js"></script>
 	</body>
 </html>
