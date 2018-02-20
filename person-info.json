@@ -1,0 +1,22 @@
+[
+  {
+    "firstName": "Thomas",
+    "lastName": "Svensson",
+    "about": "likes dogs and long walks in the rain"
+  },
+  {
+    "firstName": "Anna",
+    "lastName": "Persson",
+    "about": "likes crime novels and yoga"
+  },
+   {
+    "firstName": "Karlsson",
+    "lastName": "På Taket",
+    "about": "hates everything except eating and sleeping"
+  },
+  {
+    "firstName": "Thomas",
+    "lastName": "Frank",
+    "about": "loves Node.js"
+  }
+]
